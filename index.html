@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chungus Game</title>
+    <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <h1>Hello World!</h1>
+
+    <div id="display" class="prevent_select">
+        <div id="wave_text" class="text">Wave 1</div>
+        <div id="money_text" class="text">Money 0</div>
+        <div id="turret_text" class="text">Turret Cost 20</div>
+        <div id="quote_text" class="text">Quote</div>
+    </div>
+
+    <div id="chungi_holder">
+        <button class="chungi" class="prevent_select" onclick="chungus_clicked(this)" draggable="false">
+            <img src="images/big.png" alt="Big Chungus" draggable="false" class="prevent_select">
+        </button>
+    </div>
+
+    <audio id="music">
+        <source src="sounds/soviet-anthem.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="hit">
+        <source src="sounds/eep.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="laser">
+        <source src="sounds/laser.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
 </body>
 </html>

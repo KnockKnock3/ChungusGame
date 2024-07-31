@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(195, 1, 0);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#display {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text {
+    color: rgb(251, 214, 0);
+    font-size: 32px;
+}
+.chungi {
+    background: none;
+    position: absolute;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    pointer-events: auto;
+    animation: moveButton 5s linear;
+}
+#chungi_holder {
+    position: fixed; /* Position fixed to viewport */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 1; /* High z-index to ensure it's on top */
+    pointer-events: none; /* Make overlay non-interactive */
+}
+@keyframes moveButton {
+    0% {
+        left: 100%; /* Start off-screen to the right */
+    }
+    100% {
+        left: 0%; /* End off-screen to the left */
+    }
+}
+.prevent_select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+  }
