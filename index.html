@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chungus Game</title>
     <link rel="stylesheet" href="style.css"></link>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -15,14 +16,9 @@
         <div id="quote_text" class="text">Quote</div>
     </div>
 
-    <div id="chungi_holder">
-        <button class="chungi" class="prevent_select" onclick="chungus_clicked(this)" draggable="false">
-            <img src="images/big.png" alt="Big Chungus" draggable="false" class="prevent_select" class="chungus_image">
-        </button>
-    </div>
+    <div id="chungi_holder" class="prevent_select"></div>
 
-    <div id="turret_holder">
-    </div>
+    <div id="turret_holder"></div>
 
     <audio id="music">
         <source src="sounds/soviet-anthem.mp3" type="audio/mpeg">
@@ -37,6 +33,5 @@
         Your browser does not support the audio element.
     </audio>
 
-    <script src="script.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 #display {
     height: 400px;
@@ -21,68 +22,70 @@ body {
     color: rgb(251, 214, 0);
     font-size: 32px;
 }
-.chungi {
+#chungi_holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    animation: move_holder 10s linear infinite;
+    overflow: visible;
+}
+.chungus {
     background: none;
     position: absolute;
-    max-width: 100%;
-    height: 10%;
+    height: 15vh;
     border: none;
     padding: 0;
     margin: 0;
     cursor: pointer;
     display: inline-block;
     pointer-events: auto;
-    animation: moveButton 5s linear;
-}
-.chungus_image {
-    height: 100%;
-    width: 100%;
-}
-#chungi_holder {
-    position: fixed; /* Position fixed to viewport */
-    top: 0; /* Position at the top */
-    left: 0; /* Position at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    z-index: 1; /* High z-index to ensure it's on top */
-    pointer-events: none; /* Make overlay non-interactive */
-}
-@keyframes moveButton {
-    0% {
-        left: 100%; /* Start off-screen to the right */
-    }
-    100% {
-        left: 0%; /* End off-screen to the left */
-    }
 }
 .prevent_select {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-            -moz-user-select: none;
-            -webkit-user-drag: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-drag: none;
-            -webkit-user-drag: none;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-  }
-  #turret_holder {
-    position: fixed; /* Position fixed to viewport */
-    top: 0; /* Position at the top */
-    left: 0; /* Position at the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    z-index: 1; /* High z-index to ensure it's on top */
-    pointer-events: none; /* Make overlay non-interactive */
-  }
-  .turret {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+@keyframes move_holder {
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100vw); /* End off-screen to the left */
+    }
+}
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+#turret_holder {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+.turret {
+    position: absolute;
     background-color: grey;
-    border-radius: 15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(50, 219, 81);
 }
