@@ -5,6 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 #display {
     height: 400px;
@@ -23,6 +24,8 @@ body {
 .chungi {
     background: none;
     position: absolute;
+    max-width: 100%;
+    height: 10%;
     border: none;
     padding: 0;
     margin: 0;
@@ -30,6 +33,10 @@ body {
     display: inline-block;
     pointer-events: auto;
     animation: moveButton 5s linear;
+}
+.chungus_image {
+    height: 100%;
+    width: 100%;
 }
 #chungi_holder {
     position: fixed; /* Position fixed to viewport */
@@ -63,3 +70,19 @@ body {
             -webkit-user-select: none;
             -ms-user-select: none;
   }
+  #turret_holder {
+    position: fixed; /* Position fixed to viewport */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 1; /* High z-index to ensure it's on top */
+    pointer-events: none; /* Make overlay non-interactive */
+  }
+  .turret {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 15px;
+}
